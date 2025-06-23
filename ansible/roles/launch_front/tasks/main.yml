@@ -6,6 +6,7 @@
     name: devops-front
     image: lilgrand/tp-devops-front
     state: started
-    restart_policy: always
+    pull: always
+    restart: true
     networks:
       - name: app_network

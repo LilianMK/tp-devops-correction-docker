@@ -6,7 +6,8 @@
     name: database
     image: lilgrand/tp-devops-database
     state: started
-    restart_policy: always
+    pull: always
+    restart: true
     env:
       POSTGRES_PASSWORD: pwd
     volumes:

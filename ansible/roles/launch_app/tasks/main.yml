@@ -6,7 +6,8 @@
     name: simple-api
     image: lilgrand/tp-devops-simple-api
     state: started
-    restart_policy: always
+    pull: always
+    restart: true
     env:
       DATABASE_HOST: database
       DATABASE_PASSWORD: pwd

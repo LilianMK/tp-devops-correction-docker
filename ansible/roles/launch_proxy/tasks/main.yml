@@ -6,7 +6,8 @@
     name: httpd
     image: lilgrand/tp-devops-http
     state: started
-    restart_policy: always
+    pull: always
+    restart: true
     ports:
       - "80:80"
     networks:
