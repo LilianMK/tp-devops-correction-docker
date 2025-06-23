@@ -1,0 +1,11 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for roles/launch_front
+- name: Run front container
+  docker_container:
+    name: devops-front
+    image: lilgrand/tp-devops-front
+    state: started
+    restart_policy: always
+    networks:
+      - name: app_network
