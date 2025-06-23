@@ -1,0 +1,13 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for roles/launch_proxy
+- name: Run HTTP proxy container
+  docker_container:
+    name: httpd
+    image: lilgrand/tp-devops-http
+    state: started
+    restart_policy: always
+    ports:
+      - "80:80"
+    networks:
+      - name: app_network

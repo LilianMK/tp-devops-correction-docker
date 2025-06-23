@@ -1,0 +1,9 @@
+all:
+ vars:
+   ansible_user: admin
+   # Chemin vers la clé privée
+   ansible_ssh_private_key_file: ~/.ssh/takima/id_rsa
+ children:
+   prod:
+    # Adresse des hosts
+     hosts: lilian.legrand.takima.cloud
